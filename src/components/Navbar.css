@@ -1,0 +1,86 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure the body takes up full height */
+  body {
+    margin: 0;  /* Remove default margin */
+    height: 100%;  /* Ensure body spans the full height */
+  }
+  
+  /* Navbar container */
+  .navbar {
+    display: flex;
+    justify-content: space-between;  /* Spread logo and links across */
+    align-items: center;
+    background-color: #FF66B2;  /* Light pink background */
+    padding: 10px 20px;  /* Padding to space out the content */
+    position: fixed;  /* Make it fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;  /* Ensure it spans from left to right */
+    width: 100vw;  /* Full width of the viewport */
+    z-index: 1000;
+    border-bottom: 2px solid #FF3385;  /* Slightly darker pink border */
+    box-sizing: border-box;
+    color: white  /* Include padding in the width calculation */
+  }
+  
+  /* Logo styling */
+  .navbar-logo .logo {
+    height: 40px; /* Adjust size of your logo */
+    width: auto;
+  }
+  
+  /* Navbar links container */
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;  /* Align the links to the left */
+    width: 100%;  /* Ensure the links stretch across */
+  }
+  
+  /* Navbar link styling */
+  .navbar-link {
+    color: white;  /* White text for the links */
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-left: 20px;  /* Spacing between links */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect on links */
+  .navbar-link:hover {
+    background-color: #FF3385;  /* Darker pink when hovering */
+    border-radius: 5px;
+  }
+  
+  /* Active link styling */
+  .navbar-link:active {
+    background-color: #FF1F5A;  /* Even darker pink when the link is clicked */
+  }
+  
+  /* Optional mobile responsiveness */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      margin-top: 10px;
+      width: 100%;  /* Make the links take up the full width */
+    }
+  
+    .navbar-link {
+      margin: 5px 0;
+    }
+  }
+  

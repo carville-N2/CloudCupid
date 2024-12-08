@@ -1,0 +1,53 @@
+/* profiles-list */
+.profiles-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-info div {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.title {
+  display: flex;              /* Use flexbox */
+  flex-direction: column;     /* Stack the elements vertically */
+  justify-content: center;    /* Center vertically */
+  align-items: center;        /* Center horizontally */
+  text-align: center;         /* Ensure text is centered */
+}

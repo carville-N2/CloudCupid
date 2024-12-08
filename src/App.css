@@ -1,13 +1,18 @@
+/* Set max width for root element and center */
 #root {
   max-width: 1280px;
   margin: 0 auto;
+  background-color: #f9f9f9; /* Light background to make the content pop */
 }
+
+/* Container styling with padding to prevent content overlap */
 .container {
-  width: 100%;
   padding-inline: 1rem;
+  padding-top: 100px;
+  color: #333; /* Dark text color */
 }
 
-
+/* Upload form container */
 .upload-form {
   display: flex;
   flex-direction: row;
@@ -15,6 +20,8 @@
   width: fit-content;
   text-align: center;
 }
+
+/* Styling for the inputs container inside the upload form */
 .upload-form_inputs {
   display: flex;
   flex-direction: row;
@@ -22,42 +29,57 @@
   gap: 10px;
   width: 100%;
   padding: 1rem;
+  background-color: #fff;  /* Light background for the form */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for some depth */
 }
+
+/* Styling for the label inside upload form */
 .upload-form_inputs > label {
   font-size: 2.5rem;
-  color: rgb(84, 162, 84);
+  color: #ff66b2; /* Light pink color */
 }
-.upload-form_inputs > label :hover {
- cursor: pointer;
- color:  rgb(113, 25, 176);
+
+.upload-form_inputs > label:hover {
+  cursor: pointer;
+  color: #ff3385; /* Darker pink on hover */
 }
+
+/* Display section inside the form */
 .upload-form_display {
   width: 70%;
   align-items: center;
   padding: 2rem;
 }
+
+/* Styling for the dropdown select */
 .upload-form_inputs > select {
   width: 30%;
   height: 2rem;
-  border: 1px solid #888;
+  border: 1px solid #ff66b2; /* Pink border for the select */
   border-radius: 5px;
   padding: 0.5rem;
   outline: none;
+  background-color: #fff; /* Light background for select */
 }
 
+/* Styling for the uploaded image */
 .displayImg {
   width: 100%;
   height: 100%;
   border-radius: 2rem;
   object-fit: contain;   
 }
+
+/* Styling for the form row */
 .row-form { 
   width: 100%;
 }
 
+/* Row display for the images and content */
 .row-display {
   margin-top: 1rem;
-  border-top: 2px solid #888;
+  border-top: 2px solid #ff66b2; /* Light pink border */
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -66,6 +88,7 @@
   margin-bottom: 1rem;
 }
 
+/* Styling for each image card */
 .card {
   width: 380px;
   height: auto;
@@ -73,26 +96,66 @@
   flex-direction: column;
   gap: 10px;
   padding: 1rem;
-  border: 1px solid #888;
+  border: 1px solid #ff66b2; /* Light pink border */
   border-radius: 5px;
   margin-top: 1rem;
+  background-color: #fff; /* Light background for cards */
 }
+
+/* Image inside the card */
 .card > img {
   width: 100%;
   height: 100%;
   border-radius: 5px;
   object-fit: contain;
 }
+
+/* Styling for delete button */
 .del {
-  background-color: #888;
-  color: red;
+  background-color: #ff3385; /* Darker pink */
+  color: white;
   width: fit-content;
   font-size: larger;
   padding: 0.3rem 0.4rem;
+  border-radius: 5px;
 }
+
+/* Hover effect for the delete button */
 .del:hover {
   cursor: pointer;
-  background-color: red;
+  background-color: #ff1f5a; /* Even darker pink on hover */
   color: #fff;
 }
 
+/* Make the page responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;  /* Make the links take up the full width */
+  }
+
+  .navbar-link {
+    margin: 5px 0;
+  }
+
+  .card {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .upload-form_inputs {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .upload-form_inputs > select {
+    width: 100%;
+  }
+}
