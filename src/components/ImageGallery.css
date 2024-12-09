@@ -11,34 +11,63 @@
   overflow: hidden;
   background-color: #f0f0f0;
   border-radius: 8px;
-  padding: 8px;
-  height: 300px; /* Increased the height of the image boxes */
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ensure the content is at the top of the container */
+  text-align: center;
+  height: auto; /* The container height adjusts based on the text */
 }
 
 .image-item img {
   width: 100%;
-  height: 100%;
-  object-fit: contain; /* Use 'contain' to ensure the image fits within the box without cropping */
+  height: 300px; /* Increased height for the image */
+  object-fit: cover; /* Make sure the image covers the space without distortion */
+}
+
+.image-info {
+  color: #333333; /* Dark grey color for text */
+  margin-bottom: 10px; /* Add space between text and button */
+}
+
+.image-info p {
+  margin: 5px 0;
+  font-size: 12px; /* Font size for the text */
 }
 
 .delete-container {
-  position: absolute;
-  bottom: 8px; /* Position the button at the bottom */
-  left: 8px; /* Position the button at the left */
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: auto; /* Ensure the delete button stays at the bottom */
 }
 
 .delete-btn {
-  background-color: red;
+  background-color: #ff4d4d;
   color: white;
   border: none;
-  padding: 8px;
+  padding: 6px 12px; /* Adjusted padding for the button */
   border-radius: 4px;
   cursor: pointer;
+  font-size: 12px; /* Font size for the delete button */
 }
 
 .delete-btn:hover {
-  background-color: darkred;
+  background-color: #e60000;
+}
+
+.username {
+  font-size: 12px; /* Font size for the username */
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* Ensure text in metadata section is visible */
+.image-info p {
+  color: #333333 !important;  /* Dark grey color */
+}
+
+/* Override any other potential color conflicts in the delete button */
+.delete-container {
+  margin-top: 10px;
 }
